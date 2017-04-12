@@ -7,17 +7,20 @@ vec3 = function(x,y,z)
 
 vec3.prototype.max = function(v)
 {
-    if(v.x>v.y)
+    var x = v.x;
+    var y = v.y;
+    var z = v.z;
+    if(x>y)
     {
-	if(v.x>v.z)
-	    return v.x;
+	if(x>z)
+	    return x;
 	else
-	    return v.z;
+	    return z;
     }
-	else if(v.y>v.z)
-	    return v.y;
+	else if(y>z)
+	    return y;
 	else
-	    return v.z;
+	    return z;
 }
 
 vec3.prototype.min = function(v)
