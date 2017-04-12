@@ -1,11 +1,11 @@
-vec3 = function(x,y,z)
+Vec3 = function(x,y,z)
 {
     this.x=x;
     this.y=y;
     this.z=z;
 }
 
-vec3.prototype.max = function(v)
+Vec3.prototype.max = function(v)
 {
     if(v.x>v.y)
     {
@@ -20,7 +20,7 @@ vec3.prototype.max = function(v)
 	    return v.z;
 }
 
-vec3.prototype.min = function(v)
+Vec3.prototype.min = function(v)
 {
     if(v.x<v.y)
     {
@@ -35,7 +35,7 @@ vec3.prototype.min = function(v)
 	    return v.z;
 }
 
-vec3.prototype.mid = function(v)
+Vec3.prototype.mid = function(v)
 {
     return this.x + this.y + this.z - v.min - v.max
 }
