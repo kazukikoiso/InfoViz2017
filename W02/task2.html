@@ -3,7 +3,34 @@
     <title>W02: task1</title>
   </head>
   <body>
+    <form name = "nyuuryoku">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
+      <input type = "text">
     <script>
+      var x0,y0,z0;
+      var x1,y1,z1;
+      var x2,y2,z2;
+      x0 = parseInt(document.nyuuryoku.elements[0].value);
+      x1 = parseInt(document.nyuuryoku.elements[1].value);
+      x2 = parseInt(document.nyuuryoku.elements[2].value);
+      y0 = parseInt(document.nyuuryoku.elements[3].value);
+      y1 = parseInt(document.nyuuryoku.elements[4].value);
+      y2 = parseInt(document.nyuuryoku.elements[5].value);
+      z0 = parseInt(document.nyuuryoku.elements[6].value);
+      z1 = parseInt(document.nyuuryoku.elements[7].value);
+      z2 = parseInt(document.nyuuryoku.elements[8].value);
+      var v0 = new vec3(x0,y0,z0);
+      var v1 = new vec3(x1,y1,z1);
+      var v2 = new vec3(x2,y2,z2);
+      var S = AreaOfTriangle(v0,v1,v2);
+      document.write("AreaOfTriangle=" + S + )
     </script>
   </body>
 </html>
