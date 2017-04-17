@@ -28,30 +28,30 @@ vec3.prototype.max = function(v)
     var z = v.z;
     if(x>y)
     {
-	if(x>z)
-	    return x;
-	else
-	    return z;
+    if(x>z)
+        return x;
+    else
+        return z;
     }
-	else if(y>z)
-	    return y;
-	else
-	    return z;
+    else if(y>z)
+        return y;
+    else
+        return z;
 }
 
 vec3.prototype.min = function(v)
 {
     if(v.x<v.y)
     {
-	if(v.x<v.z)
-	    return v.x;
-	else
-	    return v.z;
+    if(v.x<v.z)
+        return v.x;
+    else
+        return v.z;
     }
-	else if(v.y<v.z)
-	    return v.y;
-	else
-	    return v.z;
+    else if(v.y<v.z)
+        return v.y;
+    else
+        return v.z;
 }
 
 vec3.prototype.mid = function(v)
@@ -61,7 +61,7 @@ vec3.prototype.mid = function(v)
 
 vec3.prototype.crossproduct = function(v)
 {
-            var x = this.x;
+        var x = this.x;
         var y = this.y;
         var z = this.z;
 
@@ -77,9 +77,12 @@ vec3.prototype.length = function(v)
     return Math.sqrt( this.x * this.x + this.y * this.y + this.z * this.z );
 }
 
-function AreaOfTriangle(v0,v1,v2)
+vec3.prototype.AreaOfTriangle = function(v0,v1,v2)
 {
     var v10 = v0.sub(v1);
     var v12 = v2.sub(v1);
-    return 0.5*v10.crossproduct(v12).length();   
+    var v22 = v10.crossproduct(v12)
+    return 0.5*v22.length();
 }
+
+
